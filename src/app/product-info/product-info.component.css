@@ -1,0 +1,20 @@
+.product-list-container {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.product-list-container .mat-list .mat-list-item {
+    padding: 0;
+    height: 25px;
+}
+.product-detail-list {
+    display: flex
+}
+
+.product-detail-list .left {
+    flex: 1 0 10%;
+}
+
+.product-detail-list .right {
+    flex: 1 0 90%;
+}

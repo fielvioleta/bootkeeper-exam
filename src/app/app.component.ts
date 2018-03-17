@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bootkeeper';
+	title = 'Bootkeeper';
+
+	selected: any;
+
+	receiveData($event) {
+		this.selected = $event;
+	}
 }

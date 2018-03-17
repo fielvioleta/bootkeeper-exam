@@ -1,11 +1,9 @@
 <div class="company-list-container">
 	<div class="" id="title">
     	<h3 class="title-companies">Companies</h3>
-
-    	<section id="blocks">
-        <div *ngFor="let company of companies">
-        	<img src="http://www.toyota-global.com/pages/contents/company/images/company.jpg" style="width:100%">
-        </div>
-      </section>
+    	<app-company-table 
+    		*ngIf="compnaies"
+    		[data]="compnaies"
+    	></app-company-table>
   	</div>
 </div>

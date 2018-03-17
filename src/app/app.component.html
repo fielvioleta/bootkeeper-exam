@@ -1,2 +1,3 @@
 <app-tab-component></app-tab-component>
-<app-company-list></app-company-list>
+<app-company-list (sendData)="receiveData($event)"></app-company-list>
+<app-modal *ngIf="selected" [selected]="selected"></app-modal>

@@ -1,0 +1,56 @@
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      {{selected.id}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Company detail</h4>
+        </div>
+        <div class="modal-body">
+          
+          <div class="panel-parent" >
+            <mat-list class="content-alignment">
+                <mat-divider></mat-divider>
+                <div class="content">
+                <mat-list-item>id</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Company name</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Number of employees</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Market</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>city</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>Products</mat-list-item>
+                <mat-divider></mat-divider>
+              </div>
+              <div class="right-content">
+                <mat-list-item>{{selected.id}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>{{selected.company}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>{{selected.number_of_employees}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>{{selected.market_cap}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>{{selected.hq_city}}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <select (change)="onChange($event.target.value)" class="selectpicker">
+                    <option [value]="product|json" *ngFor="let product of selected.products">{{product.name}}</option>
+                  </select>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+              </div>
+            </mat-list>
+          </div>
+          <app-product-info *ngIf="product" [product]="product"></app-product-info>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
